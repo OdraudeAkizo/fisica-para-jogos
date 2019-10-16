@@ -6,7 +6,7 @@ public class PuloPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
     bool noChao = false;
-    public float chaoCheckRaio = 0.2f;
+    float chaoCheckRaio = 0.2f;
     public Transform ChaoCheck;
     public LayerMask OQueEChao;
     void Start()
