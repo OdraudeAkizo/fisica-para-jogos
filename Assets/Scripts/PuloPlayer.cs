@@ -22,7 +22,7 @@ public class PuloPlayer : MonoBehaviour
     void Update()
     {
         if (noChao && Input.GetButton("Jump"))
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 30));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 60));
     }
 
     

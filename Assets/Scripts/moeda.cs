@@ -8,7 +8,9 @@ public class moeda : MonoBehaviour
 
     // Start is called before the first frame update
     public int qtdmoeda = 0;
-    public Text txtmoedas; 
+    public Text txtmoedas;
+    public AudioSource coins;
+    public AudioClip ac;
     void Start()
     {
         
@@ -26,6 +28,7 @@ public class moeda : MonoBehaviour
         if (moeda.gameObject.CompareTag("mueda"))
         {
             Destroy(moeda.gameObject);
+            coins.PlayOneShot(ac);
             qtdmoeda++;
         }
     }
