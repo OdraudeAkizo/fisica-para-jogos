@@ -20,11 +20,24 @@ public class MovendoPlayer : MonoBehaviour
     {
         axis = Input.GetAxis("Horizontal");
         if (axis > 0 && !ladoD)
+        {
             Vire();
+            animator.SetBool("andando", true);
+        }
+            
         if (axis < 0 && ladoD)
+        {
             Vire();
-        vel = new Vector2(axis * MaxVel, GetComponent<Rigidbody2D>().velocity.y);
-        GetComponent<Rigidbody2D>().velocity = vel;
+            animator.SetBool("andando", true);
+        }
+        if (axis == 0)
+        {
+            animator.SetBool("andando", false);
+        }
+
+        //vel = new Vector2(axis * MaxVel , GetComponent<Rigidbody2D>().velocity.y);
+        //GetComponent<Rigidbody2D>().velocity = vel;
+        this.transform.Translate(new Vector2(axis *MaxVel* Time.deltaTime, 0));
     }
 
     // Update is called once per frame
