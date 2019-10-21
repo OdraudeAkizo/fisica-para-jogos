@@ -9,6 +9,7 @@ public class MovendoPlayer : MonoBehaviour
     Vector2 vel;
     bool ladoD = true;
     public float MaxVel = 10;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,7 @@ public class MovendoPlayer : MonoBehaviour
     void Vire()
     {
         ladoD = !ladoD;
-            Vector2 novoScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        Vector2 novoScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         transform.localScale = novoScale;
     }
 }
